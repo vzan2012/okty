@@ -1,11 +1,12 @@
 import { ISearchable } from './ISearchable';
+import { OutputConfig } from './OutputConfig';
 
 export class Container implements ISearchable {
   name: string;
-  image: string;
+  logo: string;
   action: string;
-  configPath: string;
 
+  id: string;
   docker: string;
   version: string;
   config: Array<{
@@ -23,6 +24,6 @@ export class Container implements ISearchable {
     }>
   }>;
 
-  output: string;
+  output: OutputConfig;
   containerId: string;
 }

@@ -1,8 +1,7 @@
 :host {
-    color: #fff;
-}
+  color: #fff;
 
-.okty-review-button {
+  .okty-review-button {
     background: linear-gradient(to left, #28a5f5, #1e87f0);
     height: 55px;
     border-radius: 50px;
@@ -10,12 +9,22 @@
     margin-right: 15px;
 
     @media screen and (max-width: 525px) {
-        width: 75%;
-        margin-bottom: 25px;
+      width: 75%;
+      margin-bottom: 25px;
     }
 
     &:hover {
-        box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
-        transition: .3s;
+      box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+      transition: .3s;
     }
+  }
+
+  .load-wrapp {
+    position: initial;
+  }
+
+  .load-5 {
+    padding-top: 0;
+  }
 }
+

@@ -2,9 +2,8 @@ import { ISearchable } from './ISearchable';
 
 export class Template implements ISearchable {
   name: string;
-  image: string;
+  logo: string;
   action: string;
-  configPath: string;
-
+  id: string;
   containers: Array<any>;
 }

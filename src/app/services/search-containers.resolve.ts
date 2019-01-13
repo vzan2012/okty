@@ -3,20 +3,19 @@ import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 import { Container } from '../models/container.model';
 import { Observable } from 'rxjs';
 import { ISearchable } from '../models/ISearchable';
-import { GithubService } from './github.service';
+import { ApiService } from './api.service';
 
 @Injectable()
 export class SearchContainersResolve implements Resolve<ISearchable[]> {
 
-  constructor(private githubService: GithubService) {
+  constructor(private apiService: ApiService) {
   }
 
   resolve(route: ActivatedRouteSnapshot): Observable<ISearchable[]> {
     return new Observable<ISearchable[]>(observer => {
-      this.githubService.getAllContainers().then(containers => {
-
+      this.apiService.getAllContainers().then(containers => {
         containers.forEach((container: Container) => {
-          container.action = '/new/' + container.configPath;
+          container.action = '/new/' + container.id;
         });
 
         observer.next(containers);

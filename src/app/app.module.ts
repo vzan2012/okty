@@ -33,8 +33,8 @@ import { ContainerValidator } from './validators/container.validator';
 import { SearchTemplatesResolve } from './services/search-templates.resolve';
 import { SearchContainersResolve } from './services/search-containers.resolve';
 import { NewTemplateResolve } from './services/new-template.resolve';
-import { GithubService } from './services/github.service';
 import { ContainerService } from './services/container.service';
+import { ApiService } from './services/api.service';
 
 // Pipes
 import { FilterPipe } from './pipes/filter.pipe';
@@ -47,54 +47,55 @@ import { FormInputDirective } from './directives/form-input.directive';
 import { routes } from './app.routes';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        SearchComponent,
-        FilterPipe,
-        SetupComponent,
-        SidebarComponent,
-        FormInputDirective,
-        InputComponent,
-        SelectComponent,
-        VoidComponent,
-        ReviewComponent,
-        MultiSelectComponent,
-        SelectContainerComponent,
-        ValidatorErrorsPipe,
-        NotificationComponent,
-        TemplateComponent,
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        RouterModule.forRoot(routes),
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
-    providers: [
-        NewContainerResolve,
-        EditContainerResolve,
-        ProjectService,
-        CacheService,
-        SidebarService,
-        MessageService,
-        CustomTitleService,
-        ContainerValidator,
-        SearchTemplatesResolve,
-        SearchContainersResolve,
-        GithubService,
-        NewTemplateResolve,
-        ContainerService,
-    ],
-    entryComponents: [
-        InputComponent,
-        SelectComponent,
-        MultiSelectComponent,
-        VoidComponent,
-        SelectContainerComponent,
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    SearchComponent,
+    FilterPipe,
+    SetupComponent,
+    SidebarComponent,
+    FormInputDirective,
+    InputComponent,
+    SelectComponent,
+    VoidComponent,
+    ReviewComponent,
+    MultiSelectComponent,
+    SelectContainerComponent,
+    ValidatorErrorsPipe,
+    NotificationComponent,
+    TemplateComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [
+    NewContainerResolve,
+    EditContainerResolve,
+    ProjectService,
+    CacheService,
+    SidebarService,
+    MessageService,
+    CustomTitleService,
+    ContainerValidator,
+    SearchTemplatesResolve,
+    SearchContainersResolve,
+    NewTemplateResolve,
+    ContainerService,
+    ApiService,
+  ],
+  entryComponents: [
+    InputComponent,
+    SelectComponent,
+    MultiSelectComponent,
+    VoidComponent,
+    SelectContainerComponent,
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
